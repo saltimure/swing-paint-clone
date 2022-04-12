@@ -2,8 +2,15 @@ package com.saltimure.paintapp.gui;
 
 import javax.swing.JFrame;
 
+/**
+ * @author saltimure
+ * Main window that contains cursor coordinates
+ */
 @SuppressWarnings("serial")
 public class PaintFrame extends JFrame{
+    
+    //cursor coordinates that will be used in dragging event
+    private int x,y;
     
     public PaintFrame() {
         this.setTitle("Paint");
@@ -13,5 +20,21 @@ public class PaintFrame extends JFrame{
         this.setLayout(null);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
     }
 }
