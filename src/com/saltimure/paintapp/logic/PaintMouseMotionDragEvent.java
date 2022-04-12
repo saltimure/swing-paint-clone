@@ -12,7 +12,7 @@ import com.saltimure.paintapp.gui.PaintFrame;
  */
 @SuppressWarnings("serial")
 public class PaintMouseMotionDragEvent extends PaintFrame implements MouseMotionListener{
-
+    
     public PaintMouseMotionDragEvent() {
         super.addMouseMotionListener(this);
     }
@@ -35,6 +35,7 @@ public class PaintMouseMotionDragEvent extends PaintFrame implements MouseMotion
     //this method will paint our circle on screen by using our paren class coordinates
     @Override
     public void paint(Graphics g) {
+        g.setColor(super.getColorButtonsPanel().getColor());
         g.fillOval(super.getX(), super.getY(), 10, 10);
     }
 }

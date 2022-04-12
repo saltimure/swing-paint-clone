@@ -13,6 +13,8 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 public class PaintFrameColorButtonsPanel extends JPanel{
     
+    private Color color;
+    
     private JButton redButton, yellowButton, blackButton;
     
     public PaintFrameColorButtonsPanel() {
@@ -39,5 +41,13 @@ public class PaintFrameColorButtonsPanel extends JPanel{
 
     public JButton getBlackButton() {
         return blackButton;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 }

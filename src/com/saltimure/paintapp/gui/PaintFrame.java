@@ -2,12 +2,16 @@ package com.saltimure.paintapp.gui;
 
 import javax.swing.JFrame;
 
+import com.saltimure.paintapp.logic.PaintFrameColorButtonsPanelActionEvents;
+
 /**
  * @author saltimure
  * Main window that contains cursor coordinates
  */
 @SuppressWarnings("serial")
 public class PaintFrame extends JFrame{
+    
+    private PaintFrameColorButtonsPanel colorButtonsPanel = new PaintFrameColorButtonsPanelActionEvents();
     
     //cursor coordinates that will be used in dragging event
     private int x,y;
@@ -19,6 +23,7 @@ public class PaintFrame extends JFrame{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
         this.setLocationRelativeTo(null);
+        this.add(colorButtonsPanel);
         this.setVisible(true);
     }
 
@@ -36,5 +41,9 @@ public class PaintFrame extends JFrame{
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public PaintFrameColorButtonsPanel getColorButtonsPanel() {
+        return colorButtonsPanel;
     }
 }
