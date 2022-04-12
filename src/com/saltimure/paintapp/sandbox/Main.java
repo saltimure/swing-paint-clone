@@ -1,5 +1,10 @@
 package com.saltimure.paintapp.sandbox;
 
-public class Main {
+import com.saltimure.paintapp.gui.PaintFrame;
 
+public class Main {
+    
+    public static void main(String[] args) {
+        PaintFrame frame = new PaintFrame();
+    }
 }
